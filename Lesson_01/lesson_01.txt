@@ -1,0 +1,33 @@
+1. Установить Python 3.x
+
+2. Установить PyCharm Community
+
+3. Ввести в консоле
+
+	import antigravity
+	import __hello__
+	from __future__ import braces
+
+4. Вывести на консоль своё имя, нарисованное 'звёздочками'. Для выполнения этого задания надо использовать не только 
+символы звёздочки и пробела, но и ESCAPE символы: \n и \t
+
+*       *         *         *       * *********
+**      *        * *        **     ** *
+* *     *       *   *       * *   * * *
+*  *    *      *     *      *  * *  * *******
+*   *   *     *       *     *   *   * *
+*    *  *    ***********    *       * *
+*     * *   *           *   *       * *
+*      **  *             *  *       * *
+*       * *               * *       * **********
+
+5. Написать программу, которая выводит в консоль таблицу Escape-последовательностей:
+
+Escape sequences
+\a      Bell (alert)
+\b      Backspace
+\n      New line
+\t      Horizontal tab
+\\      Backslash \
+\"      Double quotation mark "
+\'      Single quotation mark '
