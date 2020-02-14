@@ -9,7 +9,7 @@
 print('\n\t-= Для завершения программы, введите "0" =-\n')
 t1 = '\nКоличество введённых чисел:\t\t\t{}\nСумма введённых чисел:\t\t\t\t{}\nСреднее арифметическое:\t\t\t\t{}'
 t2 = '\nМаксимальное из введённых чисел:\t{}\nМинимальное из введённых чисел:\t\t{}'
-t3 = '\nЧётные числа:\t\t\t\t\t\t{}\nНе чётные числа:\t\t\t\t\t{}'
+t3 = '\nЧётные числа:\t\t\t\t\t\t{}\nНе чётные числа:\t\t\t\t\t{}\n\b'
 
 num = int(input('Введите целое число:\t'))      # Ввод первого числа
 
@@ -46,10 +46,12 @@ while True:
         i = num
     if num % 2 != 0:
         ii = num
-    evn += str(i) + ' '
-    odd += str(ii) + ' '
+    if not i == 0:
+        evn += str(i) + ' '
+    if not ii == 0:
+        odd += str(ii) + ' '
 
 # среднее арифметическое
 avv = ttl / cnt
 
-print('~' * 55, t1.format(cnt, ttl, avv), t2.format(mx, mn), t3.format(evn, odd))
+print('~' * 50, t1.format(cnt, ttl, avv), t2.format(mx, mn), t3.format(evn, odd), '.' * 48)
