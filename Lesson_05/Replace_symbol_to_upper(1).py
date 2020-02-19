@@ -22,8 +22,6 @@ while x != -1:
     i = x + 1
     cnt += 1
 
-    print(x, end=' ')
-
 ss = s.replace(ch, ch.upper(), cnt - 1)
 
 print(ss)
