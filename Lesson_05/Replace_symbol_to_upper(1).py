@@ -10,8 +10,6 @@ print('\n' + '\u25B5\u25BF' * 20)
 i = 0                           # индекс входа
 x = 0                           # искомый индекс
 cnt = 0
-mx = x
-mn = x
 
 while x != -1:
     x = (s.find(ch, i))
