@@ -3,9 +3,7 @@
 # Задачу необходимо решить с использованием словаря.
 
 i = 'Слово: \"{}\", встречается {} раз(а).'
-txt = input('\nВведите текст:\t')
-print()
-lst = txt.split()
+lst = (input('\nВведите текст:\t')).split()
 dct = {}
 
 for word in lst:
@@ -14,4 +12,3 @@ for word in lst:
 
 for key, val in dct.items():
     print(i.format(key, val))
-
