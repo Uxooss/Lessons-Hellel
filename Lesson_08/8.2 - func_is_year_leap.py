@@ -15,12 +15,9 @@ def is_year_leap(y):
         return False
 
 
-print()
-y = int(input('Введите год: '))
-
+y = int(input('\nВведите год: '))
 res = is_year_leap(y)
-
 if res:
-    print('\n\t{}'.format(y), 'год - высокосный.')
+    print('\n\t{} год - высокосный.'.format(y))
 else:
-    print('\n\t{}'.format(y), 'год - не высокосный.')
+    print('\n\t{} год - не высокосный.'.format(y))
