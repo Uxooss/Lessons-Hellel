@@ -26,13 +26,13 @@ print(res)
 # -----------------------------------------
 # С ввод данных:
 
-n = int(input('\nInput number:\t'))
-qtn = str(input('By default, bit will be shifted left by one digit.\n'
-                'Would you like to change value shift and direction? (y / n):\t'))
+n = int(input('\nВведите число:\t'))
+qtn = str(input('\u2755 По-умолчанию, происходит сдвиг на 1 разряд влево.\n'
+                'Хотите изменить количество и направление сдвига? (y / n):\t'))
 
 if qtn == 'y':
-    s = int(input('Set shift value:\t'))
-    d = str(input('Set shift direction ("-" or "+"):\t'))
+    s = int(input('Введите величену сдвига:\t'))
+    d = str(input('Введите направление сдвига ("-" или "+"):\t'))
 elif qtn == 'n':
     s = 1
     d = False
@@ -43,4 +43,4 @@ elif d == '+':
     d = True
 
 res = bit_shift(n, s, d)
-print(res)
+print('\nРезультат сдвига:\t', res)
