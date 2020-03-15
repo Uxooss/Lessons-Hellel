@@ -35,7 +35,7 @@ def num_convert(num, x):
     return res
 
 
-num = int(input('\nPlease enter the value:\t\t'))
-x = int(input('Please enter the numeral system:\t'))
+num = int(input('\nВведите число:\t\t\t\t'))
+x = int(input('Введите систему исчисления:\t'))
 
-print(num_convert(num, x))
+print('\nРезультат перевода:\t', num_convert(num, x))
