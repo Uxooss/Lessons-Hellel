@@ -32,7 +32,7 @@ def item_record_gen(i=0):
     :param i:
     :return: (Order Number, Book Title, Author Name, Quantity, Item Price)
     """
-    lst = []
+    fst_lst = []
     ii = ('\nOrder Number:\t',
       'Book Title:\t\t',
       'Author Name:\t',
@@ -40,56 +40,31 @@ def item_record_gen(i=0):
       'Item Price:\t\t')
 
     while i < 5:
-        lst.append(input(ii[i]))
+        fst_lst.append(input(ii[i]))
         i += 1
-    return lst
+    return fst_lst
 
 
-def list_of_items(q=True):
+def list_of_items(qtn=True):
     """
     The List of Items lists.
 
     Requesting intention on item list input and append available list, if any, to the summary list.
-    :param q:
+    :param qtn:
     :return:
     """
-    m_lst = []
-    while q:
-        if q == 'y':
-            m_lst.append(item_record_gen())
-        elif q == 'n':
-            print('\n\t\u2139\tHere is the list of new items added\t\u2B07\n\n', m_lst)
+    ttl_lst = []
+    while qtn:
+        if qtn == 'y':
+            ttl_lst.append(item_record_gen())
+        elif qtn == 'n':
             break
-        q = str(input('\nWould you like to insert new item? (y / n):\t'))
-    return m_lst
+        qtn = str(input('\nWould you like to insert new item? (y / n):\t'))
+    return ttl_lst
 
 
-def price_list_gen():
-    """
-    Order total price and quantity.
+fin_lst = list(map(lambda a: (a[0],
+        round((int(a[3]) * float(a[4]) if int(a[3]) * float(a[4]) >= 100 else int(a[3]) * float(a[4]) + 10), 2),
+        a[3]), list_of_items()))
 
-    Getting Order Numbers, Total prices (based on item price and item quantity) and Items quantity.
-    (i) if Total price less than 100$, another 10$ will be added.
-    :return: tuple of lists, containing ('Order Number', Total price, Quantity)
-    """
-    a = list_of_items()
-    f_lst = []
-
-    for n in range(len(a)):
-        itm = str(a[n][0])
-        qtt = int(a[n][3])
-        prc = float(a[n][4])
-
-        if (prc * qtt) < 100 and (prc * qtt) != 0:
-            prc = (prc * qtt) + 10
-        elif (prc * qtt) >= 100:
-            prc = (prc * qtt)
-
-        x = (itm, prc, qtt)
-        f_lst.append(x)
-    return f_lst
-
-
-print('\n\t\u2139\tHere is list of tuples, containing:\n',
-      '(\'Order Number\', Total price, Quantity)\t\u2B07\n\n',
-      price_list_gen())
+print(fin_lst)
